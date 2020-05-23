@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FirstViewController : UIViewController
+
+- (void) addAirportInList: (Airport *)airport;
+
+- (void) removeAirportInList: (Airport *)airport;
 
 @end
 

@@ -8,8 +8,15 @@
 
 #import "FirstViewController.h"
 #import "SecondViewController.h"
+#import "AirportsViewController.h"
+#import "CitiesViewController.h"
+
 
 @interface FirstViewController ()
+
+@property (nonatomic, strong) NSMutableArray *airportsArray;
+
+@property (nonatomic, strong) UILabel *label;
 
 @end
 
@@ -21,10 +28,13 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    _airportsArray = [[NSMutableArray alloc] init];
 
     [self addButtonNextController];
     [self addButtonAirports];
     [self addButtonCities];
+    [self addLable];
     
 }
 
@@ -61,30 +71,53 @@
     [self.view addSubview:button];
 }
 
-- (void)nextControllerButtonDidTap:(UIButton *)sender
-{
+- (void)nextControllerButtonDidTap:(UIButton *)sender{
     SecondViewController *controller = [SecondViewController new];
     [self.navigationController pushViewController: controller animated:YES];
 }
 
-- (void)airportsButtonDidTap:(UIButton *)sender
-{
-   
+- (void)airportsButtonDidTap:(UIButton *)sender{
+    AirportsViewController *controller = [AirportsViewController new];
+    controller.firstViewController = self;
+    _airportsArray = [[NSMutableArray alloc] init];
+    [self.navigationController pushViewController: controller animated:YES];
 }
 
-- (void)citiesButtonDidTap:(UIButton *)sender
-{
-    
+- (void)citiesButtonDidTap:(UIButton *)sender{
+    CitiesViewController *controller = [CitiesViewController new];
+    [self.navigationController pushViewController: controller animated:YES];
 }
 
-- (void) addTextField{
-    CGRect frame = CGRectMake(20, 150, self.view.bounds.size.width - 40, 30);
-    UITextField *textField = [[UITextField alloc] initWithFrame:frame];
-    textField.borderStyle = UITextBorderStyleRoundedRect;
-    textField.placeholder = @"Введите значение...";
-    textField.font = [UIFont systemFontOfSize:20.0 weight:UIFontWeightLight];
-    [self.view addSubview: textField];
-    
+- (void) addLable{
+    CGRect frame = CGRectMake(20, 250, self.view.bounds.size.width - 40, 20);
+    _label = [[UILabel alloc] initWithFrame: frame];
+    _label.font = [UIFont systemFontOfSize:12.0 weight:UIFontWeightBold];
+    _label.textColor = [UIColor darkGrayColor];
+    _label.textAlignment = NSTextAlignmentCenter;
+    _label.text = @"Список выбранных аэропортов";
+    [self.view addSubview: _label];
+}
+
+- (void) addAirportInList: (Airport *)airport{
+    [_airportsArray addObject:airport];
+    [self loadAirportsList];
+}
+
+- (void) removeAirportInList: (Airport *)airport{
+    [_airportsArray removeObject:airport];
+    [self loadAirportsList];
+}
+
+- (void) loadAirportsList{
+    _label.text = @"";
+    for (Airport *airport in _airportsArray) {
+        if( [_label.text isEqualToString:@""] ){
+            _label.text = airport.name;
+        }
+        else{
+            _label.text = [NSString stringWithFormat: @"%@, %@", _label.text, airport.name];
+        }
+    }
 }
 
 
