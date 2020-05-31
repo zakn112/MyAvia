@@ -5,7 +5,7 @@
 //  Created by Андрей Закусов on 17.05.2020.
 //  Copyright © 2020 Андрей Закусов. All rights reserved.
 //
-
+#import "AppDelegate.h"
 #import "FirstViewController.h"
 #import "SecondViewController.h"
 #import "AirportsViewController.h"
@@ -35,6 +35,7 @@
     [self addButtonAirports];
     [self addButtonCities];
     [self addLable];
+    [self addButtonNews];
     
 }
 
@@ -97,6 +98,24 @@
     _label.text = @"Список выбранных аэропортов";
     [self.view addSubview: _label];
 }
+
+- (void) addButtonNews{
+    CGRect frame = CGRectMake(20, 300, self.view.bounds.size.width - 40, 30);
+    UIButton *button = [UIButton buttonWithType: UIButtonTypeSystem];
+    [button setTitle:@"Новости" forState:UIControlStateNormal];
+    button.backgroundColor = [UIColor blueColor];
+    button.tintColor = [UIColor whiteColor];
+    button.frame = frame;
+    [button addTarget:self action:@selector(newsButtonDidTap:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+}
+
+- (void)newsButtonDidTap:(UIButton *)sender{
+    UINavigationController *controller = [[UIStoryboard storyboardWithName:@"NewsStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"NewsNavigation"];
+    [UIApplication sharedApplication].keyWindow.rootViewController = controller;
+    
+}
+
 
 - (void) addAirportInList: (Airport *)airport{
     [_airportsArray addObject:airport];

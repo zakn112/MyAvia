@@ -23,6 +23,13 @@
 		33C7D6DB24791BD3000E3E53 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 33C7D6C324791BD2000E3E53 /* cities.json */; };
 		33C7D6DC24791BD3000E3E53 /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 33C7D6C424791BD2000E3E53 /* airports.json */; };
 		33C7D6E724791D85000E3E53 /* CityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7D6E624791D85000E3E53 /* CityTableViewCell.m */; };
+		33CCAD612483972100E7C32F /* NewsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33CCAD602483972100E7C32F /* NewsStoryboard.storyboard */; };
+		33CCAD652483A13C00E7C32F /* NewsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCAD642483A13C00E7C32F /* NewsNavigationController.m */; };
+		33CCAD682483A6E300E7C32F /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCAD672483A6E300E7C32F /* NewsTableViewController.m */; };
+		33CCAD6C2483AA3C00E7C32F /* NewsDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCAD6B2483AA3C00E7C32F /* NewsDataManager.m */; };
+		33CCAD702483AA6E00E7C32F /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCAD6F2483AA6E00E7C32F /* News.m */; };
+		33CCAD742483C08800E7C32F /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCAD732483C08800E7C32F /* NewsTableViewCell.m */; };
+		33CCAD772483D97F00E7C32F /* NewsContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCAD762483D97F00E7C32F /* NewsContentViewController.m */; };
 		33DA2ADC247112FC00CF4490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33DA2ADB247112FC00CF4490 /* Assets.xcassets */; };
 		33DA2ADF247112FC00CF4490 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33DA2ADD247112FC00CF4490 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -52,6 +59,19 @@
 		33C7D6C424791BD2000E3E53 /* airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = airports.json; sourceTree = "<group>"; };
 		33C7D6E524791D85000E3E53 /* CityTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CityTableViewCell.h; sourceTree = "<group>"; };
 		33C7D6E624791D85000E3E53 /* CityTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityTableViewCell.m; sourceTree = "<group>"; };
+		33CCAD602483972100E7C32F /* NewsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsStoryboard.storyboard; sourceTree = "<group>"; };
+		33CCAD632483A13C00E7C32F /* NewsNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsNavigationController.h; sourceTree = "<group>"; };
+		33CCAD642483A13C00E7C32F /* NewsNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsNavigationController.m; sourceTree = "<group>"; };
+		33CCAD662483A6E300E7C32F /* NewsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsTableViewController.h; sourceTree = "<group>"; };
+		33CCAD672483A6E300E7C32F /* NewsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewController.m; sourceTree = "<group>"; };
+		33CCAD6A2483AA3C00E7C32F /* NewsDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsDataManager.h; sourceTree = "<group>"; };
+		33CCAD6B2483AA3C00E7C32F /* NewsDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsDataManager.m; sourceTree = "<group>"; };
+		33CCAD6E2483AA6E00E7C32F /* News.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
+		33CCAD6F2483AA6E00E7C32F /* News.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		33CCAD722483C08800E7C32F /* NewsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
+		33CCAD732483C08800E7C32F /* NewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
+		33CCAD752483D97F00E7C32F /* NewsContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsContentViewController.h; sourceTree = "<group>"; };
+		33CCAD762483D97F00E7C32F /* NewsContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsContentViewController.m; sourceTree = "<group>"; };
 		33DA2ACC247112FA00CF4490 /* MyAvia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAvia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33DA2ACF247112FA00CF4490 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		33DA2AD0247112FA00CF4490 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -88,6 +108,7 @@
 		332761B2247906BC00BDB8C4 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				33CCAD5D2483954100E7C32F /* News */,
 				332761C424790DEB00BDB8C4 /* Cities */,
 				332761BE24790D6100BDB8C4 /* Airports */,
 				332761B3247906D600BDB8C4 /* First */,
@@ -202,9 +223,61 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		33CCAD5D2483954100E7C32F /* News */ = {
+			isa = PBXGroup;
+			children = (
+				33CCAD712483BDFA00E7C32F /* Views */,
+				33CCAD622483A0F600E7C32F /* Controllers */,
+				33CCAD602483972100E7C32F /* NewsStoryboard.storyboard */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		33CCAD622483A0F600E7C32F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				33CCAD632483A13C00E7C32F /* NewsNavigationController.h */,
+				33CCAD642483A13C00E7C32F /* NewsNavigationController.m */,
+				33CCAD662483A6E300E7C32F /* NewsTableViewController.h */,
+				33CCAD672483A6E300E7C32F /* NewsTableViewController.m */,
+				33CCAD752483D97F00E7C32F /* NewsContentViewController.h */,
+				33CCAD762483D97F00E7C32F /* NewsContentViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		33CCAD692483A9D000E7C32F /* NewsData */ = {
+			isa = PBXGroup;
+			children = (
+				33CCAD6D2483AA5200E7C32F /* Model */,
+				33CCAD6A2483AA3C00E7C32F /* NewsDataManager.h */,
+				33CCAD6B2483AA3C00E7C32F /* NewsDataManager.m */,
+			);
+			path = NewsData;
+			sourceTree = "<group>";
+		};
+		33CCAD6D2483AA5200E7C32F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				33CCAD6E2483AA6E00E7C32F /* News.h */,
+				33CCAD6F2483AA6E00E7C32F /* News.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		33CCAD712483BDFA00E7C32F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				33CCAD722483C08800E7C32F /* NewsTableViewCell.h */,
+				33CCAD732483C08800E7C32F /* NewsTableViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		33DA2AC3247112FA00CF4490 = {
 			isa = PBXGroup;
 			children = (
+				33CCAD692483A9D000E7C32F /* NewsData */,
 				33C7D6B824791BD2000E3E53 /* Data */,
 				33DA2ACE247112FA00CF4490 /* MyAvia */,
 				33DA2ACD247112FA00CF4490 /* Products */,
@@ -290,6 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33CCAD612483972100E7C32F /* NewsStoryboard.storyboard in Resources */,
 				33C7D6DB24791BD3000E3E53 /* cities.json in Resources */,
 				33DA2ADF247112FC00CF4490 /* LaunchScreen.storyboard in Resources */,
 				33C7D6D624791BD3000E3E53 /* countries.json in Resources */,
@@ -308,15 +382,21 @@
 				332761CC2479117100BDB8C4 /* CitiesViewController.m in Sources */,
 				33C7D6E724791D85000E3E53 /* CityTableViewCell.m in Sources */,
 				332761C924790F6D00BDB8C4 /* AirportsViewController.m in Sources */,
+				33CCAD702483AA6E00E7C32F /* News.m in Sources */,
 				332761BD24790CFE00BDB8C4 /* main.m in Sources */,
 				332761BC24790CF600BDB8C4 /* SecondViewController.m in Sources */,
 				33C7D6D724791BD3000E3E53 /* Country.m in Sources */,
+				33CCAD682483A6E300E7C32F /* NewsTableViewController.m in Sources */,
 				33C7D6D824791BD3000E3E53 /* City.m in Sources */,
 				33C7D6DA24791BD3000E3E53 /* DataManager.m in Sources */,
+				33CCAD652483A13C00E7C32F /* NewsNavigationController.m in Sources */,
 				332761BB24790CF200BDB8C4 /* FirstViewController.m in Sources */,
 				332761CF2479152900BDB8C4 /* AirportTableViewCell.m in Sources */,
 				332761BA24790CE200BDB8C4 /* SceneDelegate.m in Sources */,
+				33CCAD772483D97F00E7C32F /* NewsContentViewController.m in Sources */,
+				33CCAD742483C08800E7C32F /* NewsTableViewCell.m in Sources */,
 				33C7D6D924791BD3000E3E53 /* Airport.m in Sources */,
+				33CCAD6C2483AA3C00E7C32F /* NewsDataManager.m in Sources */,
 				332761B924790CCB00BDB8C4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
