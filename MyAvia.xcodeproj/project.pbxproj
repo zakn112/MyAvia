@@ -32,6 +32,8 @@
 		33CCAD772483D97F00E7C32F /* NewsContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCAD762483D97F00E7C32F /* NewsContentViewController.m */; };
 		33DA2ADC247112FC00CF4490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33DA2ADB247112FC00CF4490 /* Assets.xcassets */; };
 		33DA2ADF247112FC00CF4490 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33DA2ADD247112FC00CF4490 /* LaunchScreen.storyboard */; };
+		33E4A513248FFB8500433842 /* CityMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E4A512248FFB8500433842 /* CityMapViewController.m */; };
+		33E4A516248FFFDD00433842 /* CityMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E4A515248FFFDD00433842 /* CityMapView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +83,10 @@
 		33DA2ADE247112FC00CF4490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33DA2AE0247112FC00CF4490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33DA2AE1247112FC00CF4490 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		33E4A511248FFB8500433842 /* CityMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CityMapViewController.h; sourceTree = "<group>"; };
+		33E4A512248FFB8500433842 /* CityMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityMapViewController.m; sourceTree = "<group>"; };
+		33E4A514248FFFDD00433842 /* CityMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CityMapView.h; sourceTree = "<group>"; };
+		33E4A515248FFFDD00433842 /* CityMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityMapView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,7 @@
 		332761B2247906BC00BDB8C4 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				33E4A50E248FFA2300433842 /* CityMap */,
 				33CCAD5D2483954100E7C32F /* News */,
 				332761C424790DEB00BDB8C4 /* Cities */,
 				332761BE24790D6100BDB8C4 /* Airports */,
@@ -306,6 +313,33 @@
 			path = MyAvia;
 			sourceTree = "<group>";
 		};
+		33E4A50E248FFA2300433842 /* CityMap */ = {
+			isa = PBXGroup;
+			children = (
+				33E4A50F248FFA4600433842 /* Views */,
+				33E4A510248FFA6700433842 /* Controllers */,
+			);
+			path = CityMap;
+			sourceTree = "<group>";
+		};
+		33E4A50F248FFA4600433842 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				33E4A514248FFFDD00433842 /* CityMapView.h */,
+				33E4A515248FFFDD00433842 /* CityMapView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		33E4A510248FFA6700433842 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				33E4A511248FFB8500433842 /* CityMapViewController.h */,
+				33E4A512248FFB8500433842 /* CityMapViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -382,6 +416,7 @@
 				332761CC2479117100BDB8C4 /* CitiesViewController.m in Sources */,
 				33C7D6E724791D85000E3E53 /* CityTableViewCell.m in Sources */,
 				332761C924790F6D00BDB8C4 /* AirportsViewController.m in Sources */,
+				33E4A516248FFFDD00433842 /* CityMapView.m in Sources */,
 				33CCAD702483AA6E00E7C32F /* News.m in Sources */,
 				332761BD24790CFE00BDB8C4 /* main.m in Sources */,
 				332761BC24790CF600BDB8C4 /* SecondViewController.m in Sources */,
@@ -395,6 +430,7 @@
 				332761BA24790CE200BDB8C4 /* SceneDelegate.m in Sources */,
 				33CCAD772483D97F00E7C32F /* NewsContentViewController.m in Sources */,
 				33CCAD742483C08800E7C32F /* NewsTableViewCell.m in Sources */,
+				33E4A513248FFB8500433842 /* CityMapViewController.m in Sources */,
 				33C7D6D924791BD3000E3E53 /* Airport.m in Sources */,
 				33CCAD6C2483AA3C00E7C32F /* NewsDataManager.m in Sources */,
 				332761B924790CCB00BDB8C4 /* AppDelegate.m in Sources */,
