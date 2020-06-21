@@ -15,6 +15,11 @@
 		332761C924790F6D00BDB8C4 /* AirportsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 332761C824790F6D00BDB8C4 /* AirportsViewController.m */; };
 		332761CC2479117100BDB8C4 /* CitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 332761CB2479117100BDB8C4 /* CitiesViewController.m */; };
 		332761CF2479152900BDB8C4 /* AirportTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 332761CE2479152900BDB8C4 /* AirportTableViewCell.m */; };
+		33346DE6249C7F3C00A08AE6 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33346DE5249C7F3C00A08AE6 /* MainTabBarController.m */; };
+		33346DEB249DC70800A08AE6 /* PhotoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33346DEA249DC70800A08AE6 /* PhotoStoryboard.storyboard */; };
+		33346DEE249DCF5800A08AE6 /* PhotoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33346DED249DCF5800A08AE6 /* PhotoCollectionViewController.m */; };
+		33346DF1249DD2CB00A08AE6 /* PhotoNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33346DF0249DD2CB00A08AE6 /* PhotoNavigationController.m */; };
+		33346DF4249F14F800A08AE6 /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33346DF3249F14F800A08AE6 /* PhotoCollectionViewCell.m */; };
 		33C7D6D624791BD3000E3E53 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 33C7D6BA24791BD2000E3E53 /* countries.json */; };
 		33C7D6D724791BD3000E3E53 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7D6BC24791BD2000E3E53 /* Country.m */; };
 		33C7D6D824791BD3000E3E53 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7D6BE24791BD2000E3E53 /* City.m */; };
@@ -48,6 +53,15 @@
 		332761CB2479117100BDB8C4 /* CitiesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CitiesViewController.m; sourceTree = "<group>"; };
 		332761CD2479152900BDB8C4 /* AirportTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AirportTableViewCell.h; sourceTree = "<group>"; };
 		332761CE2479152900BDB8C4 /* AirportTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirportTableViewCell.m; sourceTree = "<group>"; };
+		33346DE4249C7F3C00A08AE6 /* MainTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		33346DE5249C7F3C00A08AE6 /* MainTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		33346DEA249DC70800A08AE6 /* PhotoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoStoryboard.storyboard; sourceTree = "<group>"; };
+		33346DEC249DCF5800A08AE6 /* PhotoCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewController.h; sourceTree = "<group>"; };
+		33346DED249DCF5800A08AE6 /* PhotoCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewController.m; sourceTree = "<group>"; };
+		33346DEF249DD2CB00A08AE6 /* PhotoNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoNavigationController.h; sourceTree = "<group>"; };
+		33346DF0249DD2CB00A08AE6 /* PhotoNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoNavigationController.m; sourceTree = "<group>"; };
+		33346DF2249F14F800A08AE6 /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		33346DF3249F14F800A08AE6 /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		33C7D6B924791BD2000E3E53 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		33C7D6BA24791BD2000E3E53 /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
 		33C7D6BC24791BD2000E3E53 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
@@ -114,6 +128,8 @@
 		332761B2247906BC00BDB8C4 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				33346DE7249DC65F00A08AE6 /* Photo */,
+				33346DE3249C7EA500A08AE6 /* MainTabBar */,
 				33E4A50E248FFA2300433842 /* CityMap */,
 				33CCAD5D2483954100E7C32F /* News */,
 				332761C424790DEB00BDB8C4 /* Cities */,
@@ -200,6 +216,45 @@
 			children = (
 				33C7D6E524791D85000E3E53 /* CityTableViewCell.h */,
 				33C7D6E624791D85000E3E53 /* CityTableViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		33346DE3249C7EA500A08AE6 /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				33346DE4249C7F3C00A08AE6 /* MainTabBarController.h */,
+				33346DE5249C7F3C00A08AE6 /* MainTabBarController.m */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		33346DE7249DC65F00A08AE6 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				33346DE9249DC6CE00A08AE6 /* Views */,
+				33346DE8249DC6BE00A08AE6 /* Controllers */,
+				33346DEA249DC70800A08AE6 /* PhotoStoryboard.storyboard */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		33346DE8249DC6BE00A08AE6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				33346DEC249DCF5800A08AE6 /* PhotoCollectionViewController.h */,
+				33346DED249DCF5800A08AE6 /* PhotoCollectionViewController.m */,
+				33346DEF249DD2CB00A08AE6 /* PhotoNavigationController.h */,
+				33346DF0249DD2CB00A08AE6 /* PhotoNavigationController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		33346DE9249DC6CE00A08AE6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				33346DF2249F14F800A08AE6 /* PhotoCollectionViewCell.h */,
+				33346DF3249F14F800A08AE6 /* PhotoCollectionViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -398,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33CCAD612483972100E7C32F /* NewsStoryboard.storyboard in Resources */,
+				33346DEB249DC70800A08AE6 /* PhotoStoryboard.storyboard in Resources */,
 				33C7D6DB24791BD3000E3E53 /* cities.json in Resources */,
 				33DA2ADF247112FC00CF4490 /* LaunchScreen.storyboard in Resources */,
 				33C7D6D624791BD3000E3E53 /* countries.json in Resources */,
@@ -417,8 +473,10 @@
 				33C7D6E724791D85000E3E53 /* CityTableViewCell.m in Sources */,
 				332761C924790F6D00BDB8C4 /* AirportsViewController.m in Sources */,
 				33E4A516248FFFDD00433842 /* CityMapView.m in Sources */,
+				33346DF1249DD2CB00A08AE6 /* PhotoNavigationController.m in Sources */,
 				33CCAD702483AA6E00E7C32F /* News.m in Sources */,
 				332761BD24790CFE00BDB8C4 /* main.m in Sources */,
+				33346DEE249DCF5800A08AE6 /* PhotoCollectionViewController.m in Sources */,
 				332761BC24790CF600BDB8C4 /* SecondViewController.m in Sources */,
 				33C7D6D724791BD3000E3E53 /* Country.m in Sources */,
 				33CCAD682483A6E300E7C32F /* NewsTableViewController.m in Sources */,
@@ -429,10 +487,12 @@
 				332761CF2479152900BDB8C4 /* AirportTableViewCell.m in Sources */,
 				332761BA24790CE200BDB8C4 /* SceneDelegate.m in Sources */,
 				33CCAD772483D97F00E7C32F /* NewsContentViewController.m in Sources */,
+				33346DE6249C7F3C00A08AE6 /* MainTabBarController.m in Sources */,
 				33CCAD742483C08800E7C32F /* NewsTableViewCell.m in Sources */,
 				33E4A513248FFB8500433842 /* CityMapViewController.m in Sources */,
 				33C7D6D924791BD3000E3E53 /* Airport.m in Sources */,
 				33CCAD6C2483AA3C00E7C32F /* NewsDataManager.m in Sources */,
+				33346DF4249F14F800A08AE6 /* PhotoCollectionViewCell.m in Sources */,
 				332761B924790CCB00BDB8C4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

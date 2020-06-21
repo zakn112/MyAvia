@@ -10,6 +10,7 @@
 #import "SecondViewController.h"
 #import "AirportsViewController.h"
 #import "CitiesViewController.h"
+#import "MainTabBarController.h"
 
 
 @interface FirstViewController ()
@@ -32,10 +33,12 @@
     _airportsArray = [[NSMutableArray alloc] init];
 
     [self addButtonNextController];
-    [self addButtonAirports];
-    [self addButtonCities];
+    //[self addButtonAirports];
+    [self addButtonTickets];
+    //[self addButtonCities];
     [self addLable];
     [self addButtonNews];
+    [self addButtonPhoto];
     
 }
 
@@ -61,6 +64,17 @@
     [self.view addSubview:button];
 }
 
+- (void) addButtonTickets{
+    CGRect frame = CGRectMake(20, 150, self.view.bounds.size.width - 40, 30);
+    UIButton *button = [UIButton buttonWithType: UIButtonTypeSystem];
+    [button setTitle:@"Поиск билетов" forState:UIControlStateNormal];
+    button.backgroundColor = [UIColor blueColor];
+    button.tintColor = [UIColor whiteColor];
+    button.frame = frame;
+    [button addTarget:self action:@selector(ticketsButtonDidTap:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+}
+
 - (void) addButtonCities{
     CGRect frame = CGRectMake(20, 200, self.view.bounds.size.width - 40, 30);
     UIButton *button = [UIButton buttonWithType: UIButtonTypeSystem];
@@ -79,6 +93,12 @@
 
 - (void)airportsButtonDidTap:(UIButton *)sender{
     AirportsViewController *controller = [AirportsViewController new];
+    controller.firstViewController = self;
+    [self.navigationController pushViewController: controller animated:YES];
+}
+
+- (void)ticketsButtonDidTap:(UIButton *)sender{
+    MainTabBarController *controller = [[MainTabBarController alloc] initWithFirstController:self];
     controller.firstViewController = self;
     _airportsArray = [[NSMutableArray alloc] init];
     [self.navigationController pushViewController: controller animated:YES];
@@ -112,6 +132,23 @@
 
 - (void)newsButtonDidTap:(UIButton *)sender{
     UINavigationController *controller = [[UIStoryboard storyboardWithName:@"NewsStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"NewsNavigation"];
+    [UIApplication sharedApplication].keyWindow.rootViewController = controller;
+    
+}
+
+- (void) addButtonPhoto{
+    CGRect frame = CGRectMake(20, 350, self.view.bounds.size.width - 40, 30);
+    UIButton *button = [UIButton buttonWithType: UIButtonTypeSystem];
+    [button setTitle:@"Фотографии" forState:UIControlStateNormal];
+    button.backgroundColor = [UIColor blueColor];
+    button.tintColor = [UIColor whiteColor];
+    button.frame = frame;
+    [button addTarget:self action:@selector(photoButtonDidTap:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+}
+
+- (void)photoButtonDidTap:(UIButton *)sender{
+    UINavigationController *controller = [[UIStoryboard storyboardWithName:@"PhotoStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"PhotoCollection"];
     [UIApplication sharedApplication].keyWindow.rootViewController = controller;
     
 }

@@ -10,8 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CitiesViewController : UITableViewController
+@interface CitiesViewController : UITableViewController <UISearchResultsUpdating>
 
+@property (nonatomic, strong) NSArray *citiesArray;
+@property BOOL isSearch;
+
+- (void)update;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -13,7 +13,8 @@
 
 @interface CitiesViewController ()
 
-@property (nonatomic, strong) NSArray *citiesArray;
+@property (nonatomic, strong) UISearchController *searchController;
+@property (nonatomic, strong) CitiesViewController *resultsController;
 
 @end
 
@@ -25,15 +26,24 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadDataComplete:) name:kDataManagerLoadDataDidComplete object:nil];
     [[DataManager sharedInstance] loadData];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    if (!_isSearch){
+        _resultsController = [[CitiesViewController alloc] init];
+        _resultsController.isSearch = YES;
+        _searchController = [[UISearchController alloc] initWithSearchResultsController:_resultsController];
+        _searchController.searchResultsUpdater = self;
+        self.tableView.tableHeaderView = _searchController.searchBar;
+    }else{
+        [self.tableView setContentOffset:CGPointMake(0.0f, 40) animated:NO];
+    }
+
 }
 
 - (void)loadDataComplete:(NSNotification *)notification {
     _citiesArray = [[DataManager sharedInstance] cities];
+    [self.tableView reloadData];
+}
+
+- (void)update {
     [self.tableView reloadData];
 }
 
@@ -68,6 +78,13 @@
     controller.currentCity = city;
     [self.navigationController pushViewController: controller animated:YES];
     
+}
+
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    if (searchController.searchBar.text) {
+        _resultsController.citiesArray = [self.citiesArray filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF.name CONTAINS[cd] %@", searchController.searchBar.text]];
+        [_resultsController update];
+    }
 }
 
 
