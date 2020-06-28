@@ -11,11 +11,10 @@
 #import "AirportsViewController.h"
 #import "CitiesViewController.h"
 #import "MainTabBarController.h"
+#import "CoreDataHelper.h"
 
 
 @interface FirstViewController ()
-
-@property (nonatomic, strong) NSMutableArray *airportsArray;
 
 @property (nonatomic, strong) UILabel *label;
 
@@ -30,8 +29,14 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+    NSArray *favouriteAirports = [[CoreDataHelper sharedInstance] favorites];
+    
     _airportsArray = [[NSMutableArray alloc] init];
-
+    
+    for (BDFavouriteAirport *favouriteAirport in favouriteAirports) {
+        [_airportsArray addObject: [NSString stringWithFormat: @"%@", favouriteAirport.name]];
+    }
+    
     [self addButtonNextController];
     //[self addButtonAirports];
     [self addButtonTickets];
@@ -40,6 +45,11 @@
     [self addButtonNews];
     [self addButtonPhoto];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self loadAirportsList];
 }
 
 - (void) addButtonNextController{
@@ -100,7 +110,6 @@
 - (void)ticketsButtonDidTap:(UIButton *)sender{
     MainTabBarController *controller = [[MainTabBarController alloc] initWithFirstController:self];
     controller.firstViewController = self;
-    _airportsArray = [[NSMutableArray alloc] init];
     [self.navigationController pushViewController: controller animated:YES];
 }
 
@@ -155,23 +164,26 @@
 
 
 - (void) addAirportInList: (Airport *)airport{
-    [_airportsArray addObject:airport];
+    [_airportsArray addObject:[NSString stringWithFormat: @"%@", airport.name]];
     [self loadAirportsList];
+    
+    [[CoreDataHelper sharedInstance] addToFavorite: airport];
 }
 
 - (void) removeAirportInList: (Airport *)airport{
-    [_airportsArray removeObject:airport];
+    [_airportsArray removeObject:[NSString stringWithFormat: @"%@", airport.name]];
     [self loadAirportsList];
+    [[CoreDataHelper sharedInstance] removeFromFavorite: airport];
 }
 
 - (void) loadAirportsList{
     _label.text = @"";
-    for (Airport *airport in _airportsArray) {
+    for (NSString *airport in _airportsArray) {
         if( [_label.text isEqualToString:@""] ){
-            _label.text = airport.name;
+            _label.text = airport;
         }
         else{
-            _label.text = [NSString stringWithFormat: @"%@, %@", _label.text, airport.name];
+            _label.text = [NSString stringWithFormat: @"%@, %@", _label.text, airport];
         }
     }
 }

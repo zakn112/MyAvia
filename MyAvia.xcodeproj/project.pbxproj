@@ -20,6 +20,10 @@
 		33346DEE249DCF5800A08AE6 /* PhotoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33346DED249DCF5800A08AE6 /* PhotoCollectionViewController.m */; };
 		33346DF1249DD2CB00A08AE6 /* PhotoNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33346DF0249DD2CB00A08AE6 /* PhotoNavigationController.m */; };
 		33346DF4249F14F800A08AE6 /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33346DF3249F14F800A08AE6 /* PhotoCollectionViewCell.m */; };
+		33346DF824A8892500A08AE6 /* myAvia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33346DF624A8892500A08AE6 /* myAvia.xcdatamodeld */; };
+		33346E0224A8921300A08AE6 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 33346E0124A8921300A08AE6 /* CoreDataHelper.m */; };
+		33346E0724A8A91B00A08AE6 /* BDFavouriteAirport+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 33346E0524A8A91B00A08AE6 /* BDFavouriteAirport+CoreDataClass.m */; };
+		33346E0824A8A91B00A08AE6 /* BDFavouriteAirport+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 33346E0624A8A91B00A08AE6 /* BDFavouriteAirport+CoreDataProperties.m */; };
 		33C7D6D624791BD3000E3E53 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 33C7D6BA24791BD2000E3E53 /* countries.json */; };
 		33C7D6D724791BD3000E3E53 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7D6BC24791BD2000E3E53 /* Country.m */; };
 		33C7D6D824791BD3000E3E53 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7D6BE24791BD2000E3E53 /* City.m */; };
@@ -62,6 +66,13 @@
 		33346DF0249DD2CB00A08AE6 /* PhotoNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoNavigationController.m; sourceTree = "<group>"; };
 		33346DF2249F14F800A08AE6 /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		33346DF3249F14F800A08AE6 /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		33346DF724A8892500A08AE6 /* myAvia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myAvia.xcdatamodel; sourceTree = "<group>"; };
+		33346E0024A8921300A08AE6 /* CoreDataHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
+		33346E0124A8921300A08AE6 /* CoreDataHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
+		33346E0324A8A91B00A08AE6 /* BDFavouriteAirport+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BDFavouriteAirport+CoreDataProperties.h"; sourceTree = "<group>"; };
+		33346E0424A8A91B00A08AE6 /* BDFavouriteAirport+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BDFavouriteAirport+CoreDataClass.h"; sourceTree = "<group>"; };
+		33346E0524A8A91B00A08AE6 /* BDFavouriteAirport+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "BDFavouriteAirport+CoreDataClass.m"; sourceTree = "<group>"; };
+		33346E0624A8A91B00A08AE6 /* BDFavouriteAirport+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "BDFavouriteAirport+CoreDataProperties.m"; sourceTree = "<group>"; };
 		33C7D6B924791BD2000E3E53 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		33C7D6BA24791BD2000E3E53 /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
 		33C7D6BC24791BD2000E3E53 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
@@ -259,6 +270,28 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		33346DF524A888F400A08AE6 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				33346DF924A88B2000A08AE6 /* Model */,
+				33346DF624A8892500A08AE6 /* myAvia.xcdatamodeld */,
+				33346E0024A8921300A08AE6 /* CoreDataHelper.h */,
+				33346E0124A8921300A08AE6 /* CoreDataHelper.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		33346DF924A88B2000A08AE6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				33346E0324A8A91B00A08AE6 /* BDFavouriteAirport+CoreDataProperties.h */,
+				33346E0424A8A91B00A08AE6 /* BDFavouriteAirport+CoreDataClass.h */,
+				33346E0524A8A91B00A08AE6 /* BDFavouriteAirport+CoreDataClass.m */,
+				33346E0624A8A91B00A08AE6 /* BDFavouriteAirport+CoreDataProperties.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		33C7D6B824791BD2000E3E53 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +372,7 @@
 		33DA2AC3247112FA00CF4490 = {
 			isa = PBXGroup;
 			children = (
+				33346DF524A888F400A08AE6 /* CoreData */,
 				33CCAD692483A9D000E7C32F /* NewsData */,
 				33C7D6B824791BD2000E3E53 /* Data */,
 				33DA2ACE247112FA00CF4490 /* MyAvia */,
@@ -474,6 +508,7 @@
 				332761C924790F6D00BDB8C4 /* AirportsViewController.m in Sources */,
 				33E4A516248FFFDD00433842 /* CityMapView.m in Sources */,
 				33346DF1249DD2CB00A08AE6 /* PhotoNavigationController.m in Sources */,
+				33346E0824A8A91B00A08AE6 /* BDFavouriteAirport+CoreDataProperties.m in Sources */,
 				33CCAD702483AA6E00E7C32F /* News.m in Sources */,
 				332761BD24790CFE00BDB8C4 /* main.m in Sources */,
 				33346DEE249DCF5800A08AE6 /* PhotoCollectionViewController.m in Sources */,
@@ -483,15 +518,18 @@
 				33C7D6D824791BD3000E3E53 /* City.m in Sources */,
 				33C7D6DA24791BD3000E3E53 /* DataManager.m in Sources */,
 				33CCAD652483A13C00E7C32F /* NewsNavigationController.m in Sources */,
+				33346DF824A8892500A08AE6 /* myAvia.xcdatamodeld in Sources */,
 				332761BB24790CF200BDB8C4 /* FirstViewController.m in Sources */,
 				332761CF2479152900BDB8C4 /* AirportTableViewCell.m in Sources */,
 				332761BA24790CE200BDB8C4 /* SceneDelegate.m in Sources */,
 				33CCAD772483D97F00E7C32F /* NewsContentViewController.m in Sources */,
 				33346DE6249C7F3C00A08AE6 /* MainTabBarController.m in Sources */,
 				33CCAD742483C08800E7C32F /* NewsTableViewCell.m in Sources */,
+				33346E0724A8A91B00A08AE6 /* BDFavouriteAirport+CoreDataClass.m in Sources */,
 				33E4A513248FFB8500433842 /* CityMapViewController.m in Sources */,
 				33C7D6D924791BD3000E3E53 /* Airport.m in Sources */,
 				33CCAD6C2483AA3C00E7C32F /* NewsDataManager.m in Sources */,
+				33346E0224A8921300A08AE6 /* CoreDataHelper.m in Sources */,
 				33346DF4249F14F800A08AE6 /* PhotoCollectionViewCell.m in Sources */,
 				332761B924790CCB00BDB8C4 /* AppDelegate.m in Sources */,
 			);
@@ -675,6 +713,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		33346DF624A8892500A08AE6 /* myAvia.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				33346DF724A8892500A08AE6 /* myAvia.xcdatamodel */,
+			);
+			currentVersion = 33346DF724A8892500A08AE6 /* myAvia.xcdatamodel */;
+			path = myAvia.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 33DA2AC4247112FA00CF4490 /* Project object */;
 }

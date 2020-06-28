@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FirstViewController : UIViewController
 
+@property (nonatomic, strong) NSMutableArray *airportsArray;
+
 - (void) addAirportInList: (Airport *)airport;
 
 - (void) removeAirportInList: (Airport *)airport;

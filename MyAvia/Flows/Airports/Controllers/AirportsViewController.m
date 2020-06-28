@@ -54,6 +54,10 @@
     cell.delegate = self;
     cell.airport = airport;
     
+    if ([self.firstViewController.airportsArray containsObject:airport.name]) {
+        [cell setON];
+    }
+    
     return cell;
 }
 

@@ -24,6 +24,8 @@
         
         [_rightSwitch addTarget:self action:@selector(rightSwitchChanged:) forControlEvents:UIControlEventValueChanged];
         
+        
+        
     }
     return self;
 }
@@ -35,6 +37,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    
     // Initialization code
 }
 
@@ -44,4 +47,7 @@
     // Configure the view for the selected state
 }
 
+- (void)setON {
+   [_rightSwitch setOn:YES];
+}
 @end
