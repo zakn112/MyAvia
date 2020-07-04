@@ -39,6 +39,8 @@
 		33CCAD702483AA6E00E7C32F /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCAD6F2483AA6E00E7C32F /* News.m */; };
 		33CCAD742483C08800E7C32F /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCAD732483C08800E7C32F /* NewsTableViewCell.m */; };
 		33CCAD772483D97F00E7C32F /* NewsContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCAD762483D97F00E7C32F /* NewsContentViewController.m */; };
+		33D8DB8524B083D2000135A6 /* Notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33D8DB8424B083D2000135A6 /* Notification.storyboard */; };
+		33D8DB8824B08584000135A6 /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D8DB8724B08584000135A6 /* NotificationsViewController.m */; };
 		33DA2ADC247112FC00CF4490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33DA2ADB247112FC00CF4490 /* Assets.xcassets */; };
 		33DA2ADF247112FC00CF4490 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33DA2ADD247112FC00CF4490 /* LaunchScreen.storyboard */; };
 		33E4A513248FFB8500433842 /* CityMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E4A512248FFB8500433842 /* CityMapViewController.m */; };
@@ -99,6 +101,9 @@
 		33CCAD732483C08800E7C32F /* NewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
 		33CCAD752483D97F00E7C32F /* NewsContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsContentViewController.h; sourceTree = "<group>"; };
 		33CCAD762483D97F00E7C32F /* NewsContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsContentViewController.m; sourceTree = "<group>"; };
+		33D8DB8424B083D2000135A6 /* Notification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notification.storyboard; sourceTree = "<group>"; };
+		33D8DB8624B08584000135A6 /* NotificationsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationsViewController.h; sourceTree = "<group>"; };
+		33D8DB8724B08584000135A6 /* NotificationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationsViewController.m; sourceTree = "<group>"; };
 		33DA2ACC247112FA00CF4490 /* MyAvia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAvia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33DA2ACF247112FA00CF4490 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		33DA2AD0247112FA00CF4490 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -139,6 +144,7 @@
 		332761B2247906BC00BDB8C4 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				33D8DB8224B08300000135A6 /* Notifications */,
 				33346DE7249DC65F00A08AE6 /* Photo */,
 				33346DE3249C7EA500A08AE6 /* MainTabBar */,
 				33E4A50E248FFA2300433842 /* CityMap */,
@@ -369,6 +375,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		33D8DB8224B08300000135A6 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				33D8DB8324B08318000135A6 /* Controllers */,
+				33D8DB8424B083D2000135A6 /* Notification.storyboard */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		33D8DB8324B08318000135A6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				33D8DB8624B08584000135A6 /* NotificationsViewController.h */,
+				33D8DB8724B08584000135A6 /* NotificationsViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		33DA2AC3247112FA00CF4490 = {
 			isa = PBXGroup;
 			children = (
@@ -491,6 +515,7 @@
 				33C7D6DB24791BD3000E3E53 /* cities.json in Resources */,
 				33DA2ADF247112FC00CF4490 /* LaunchScreen.storyboard in Resources */,
 				33C7D6D624791BD3000E3E53 /* countries.json in Resources */,
+				33D8DB8524B083D2000135A6 /* Notification.storyboard in Resources */,
 				33DA2ADC247112FC00CF4490 /* Assets.xcassets in Resources */,
 				33C7D6DC24791BD3000E3E53 /* airports.json in Resources */,
 			);
@@ -508,6 +533,7 @@
 				332761C924790F6D00BDB8C4 /* AirportsViewController.m in Sources */,
 				33E4A516248FFFDD00433842 /* CityMapView.m in Sources */,
 				33346DF1249DD2CB00A08AE6 /* PhotoNavigationController.m in Sources */,
+				33D8DB8824B08584000135A6 /* NotificationsViewController.m in Sources */,
 				33346E0824A8A91B00A08AE6 /* BDFavouriteAirport+CoreDataProperties.m in Sources */,
 				33CCAD702483AA6E00E7C32F /* News.m in Sources */,
 				332761BD24790CFE00BDB8C4 /* main.m in Sources */,

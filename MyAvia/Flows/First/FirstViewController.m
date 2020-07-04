@@ -12,6 +12,8 @@
 #import "CitiesViewController.h"
 #import "MainTabBarController.h"
 #import "CoreDataHelper.h"
+#import <UserNotifications/UserNotifications.h>
+#import "NotificationsViewController.h"
 
 
 @interface FirstViewController ()
@@ -44,6 +46,19 @@
     [self addLable];
     [self addButtonNews];
     [self addButtonPhoto];
+    [self addButtonNotification];
+    
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    center.delegate = self;
+    [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert)
+                          completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        if (!error) {
+            NSLog(@"request authorization succeeded!");
+        }
+    }];
+
+    
+    
     
 }
 
@@ -162,6 +177,21 @@
     
 }
 
+- (void) addButtonNotification{
+    CGRect frame = CGRectMake(20, 400, self.view.bounds.size.width - 40, 30);
+    UIButton *button = [UIButton buttonWithType: UIButtonTypeSystem];
+    [button setTitle:@"Добавить напоминание" forState:UIControlStateNormal];
+    button.backgroundColor = [UIColor blueColor];
+    button.tintColor = [UIColor whiteColor];
+    button.frame = frame;
+    [button addTarget:self action:@selector(notificationButtonDidTap:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+}
+
+- (void)notificationButtonDidTap:(UIButton *)sender{
+   NotificationsViewController *controller = [[UIStoryboard storyboardWithName:@"Notification" bundle:nil] instantiateViewControllerWithIdentifier:@"NotificationController"];
+   [UIApplication sharedApplication].keyWindow.rootViewController = controller;
+}
 
 - (void) addAirportInList: (Airport *)airport{
     [_airportsArray addObject:[NSString stringWithFormat: @"%@", airport.name]];
