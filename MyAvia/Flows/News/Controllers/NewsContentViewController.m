@@ -11,6 +11,7 @@
 @interface NewsContentViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *content;
 @property (weak, nonatomic) IBOutlet UILabel *newsTitle;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentTopConstr;
 
 @end
 
@@ -21,6 +22,31 @@
     
     _newsTitle.text = _news.title;
     _content.text = _news.content;
+    
+    self.newsTitle.alpha = 0.0;
+    
+    [UIView animateWithDuration:1.0
+                          delay:1.0
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+        self.contentTopConstr.constant = 100.0;
+        
+        [self.view setNeedsLayout];
+        [self.view layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        
+        [UIView animateWithDuration:1.0
+                              delay:0.0
+                            options:UIViewAnimationOptionCurveEaseOut
+                         animations:^{
+            self.newsTitle.alpha = 1.0;
+        } completion:
+         ^(BOOL finished) {
+            self.content.alpha = 1.0;
+        }];
+        
+    }];
+    
 
 }
 

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notifications View Controller-->
+        <scene sceneID="pPM-fh-S5S">
+            <objects>
+                <viewController storyboardIdentifier="NotificationController" id="qTv-Mt-s3r" customClass="NotificationsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jtQ-0T-MXT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6pt-ql-rw3">
+                                <rect key="frame" x="10" y="54" width="394" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="zRw-H7-ljF"/>
+                                </constraints>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTY-fh-fjd">
+                                <rect key="frame" x="72" y="107" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tTP-ZY-Lu5">
+                                <rect key="frame" x="10" y="280" width="394" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="VrD-hD-16O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IdD-6T-ty3">
+                                <rect key="frame" x="10" y="324" width="394" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="j57-Nr-AWW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWs-U0-fO2">
+                                <rect key="frame" x="10" y="368" width="394" height="30"/>
+                                <color key="backgroundColor" red="0.0087351832790000007" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rjD-te-ryo"/>
+                                </constraints>
+                                <state key="normal" title="Добавить напоминание">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNotificationButtonPress:" destination="qTv-Mt-s3r" eventType="touchUpInside" id="6l8-t0-u84"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6pt-ql-rw3" firstAttribute="top" secondItem="hc8-3Z-xSo" secondAttribute="top" constant="10" id="80y-qa-tpT"/>
+                            <constraint firstItem="TWs-U0-fO2" firstAttribute="leading" secondItem="hc8-3Z-xSo" secondAttribute="leading" constant="10" id="AlR-Le-jwW"/>
+                            <constraint firstItem="hc8-3Z-xSo" firstAttribute="trailing" secondItem="TWs-U0-fO2" secondAttribute="trailing" constant="10" id="Cs9-qf-djP"/>
+                            <constraint firstItem="hc8-3Z-xSo" firstAttribute="trailing" secondItem="6pt-ql-rw3" secondAttribute="trailing" constant="10" id="LJz-vR-s0T"/>
+                            <constraint firstItem="IdD-6T-ty3" firstAttribute="leading" secondItem="hc8-3Z-xSo" secondAttribute="leading" constant="10" id="SH0-Vk-orq"/>
+                            <constraint firstItem="6pt-ql-rw3" firstAttribute="leading" secondItem="hc8-3Z-xSo" secondAttribute="leading" constant="10" id="XVt-sr-bHl"/>
+                            <constraint firstItem="TWs-U0-fO2" firstAttribute="top" secondItem="IdD-6T-ty3" secondAttribute="bottom" constant="10" id="ZTm-dD-x2M"/>
+                            <constraint firstItem="hc8-3Z-xSo" firstAttribute="trailing" secondItem="tTP-ZY-Lu5" secondAttribute="trailing" constant="10" id="bzn-56-2lm"/>
+                            <constraint firstItem="tTP-ZY-Lu5" firstAttribute="top" secondItem="6pt-ql-rw3" secondAttribute="bottom" constant="10" id="fGN-Rj-mZs"/>
+                            <constraint firstItem="IdD-6T-ty3" firstAttribute="top" secondItem="tTP-ZY-Lu5" secondAttribute="bottom" constant="10" id="jCg-eV-GpC"/>
+                            <constraint firstItem="tTP-ZY-Lu5" firstAttribute="leading" secondItem="hc8-3Z-xSo" secondAttribute="leading" constant="10" id="kzC-OH-Pe1"/>
+                            <constraint firstItem="hc8-3Z-xSo" firstAttribute="trailing" secondItem="IdD-6T-ty3" secondAttribute="trailing" constant="10" id="zI3-RP-EP2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hc8-3Z-xSo"/>
+                    </view>
+                    <connections>
+                        <outlet property="TitleTextField" destination="tTP-ZY-Lu5" id="vHw-Z8-zuZ"/>
+                        <outlet property="bodyTextField" destination="IdD-6T-ty3" id="CNF-bG-dDo"/>
+                        <outlet property="datePiker" destination="6pt-ql-rw3" id="1dF-Qz-Yj1"/>
+                        <outlet property="titleTextField" destination="tTP-ZY-Lu5" id="iQr-pL-d2O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vYa-jD-OAl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13.043478260869566" y="59.598214285714285"/>
+        </scene>
+    </scenes>
+</document>
