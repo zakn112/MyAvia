@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  MyAvia
+
+  Created by Андрей Закусов on 12.07.2020.
+  Copyright © 2020 Андрей Закусов. All rights reserved.
+*/
+"airports" = "Аэропорты";
+"nextController" = "Следующий контроллер";
+"searchTickets" = "Поиск билетов";
+"list of selected airports" = "Список выбранных аэропортов";
+"news" = "Новости";
+"photos" = "Фотографии";
+"addNotification" = "Добавить напоминание";
