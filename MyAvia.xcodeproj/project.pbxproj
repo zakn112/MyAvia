@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3301AF1B24BAD5360028C366 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3301AF1D24BAD5360028C366 /* Localizable.strings */; };
+		3301AF1F24BADB140028C366 /* NewsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3301AF2124BADB140028C366 /* NewsStoryboard.storyboard */; };
+		3301AF2424BADB8A0028C366 /* Notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3301AF2624BADB8A0028C366 /* Notification.storyboard */; };
 		332761B924790CCB00BDB8C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DA2AD0247112FA00CF4490 /* AppDelegate.m */; };
 		332761BA24790CE200BDB8C4 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DA2AD3247112FA00CF4490 /* SceneDelegate.m */; };
 		332761BB24790CF200BDB8C4 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 332761B02479053A00BDB8C4 /* FirstViewController.m */; };
@@ -32,13 +35,13 @@
 		33C7D6DB24791BD3000E3E53 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 33C7D6C324791BD2000E3E53 /* cities.json */; };
 		33C7D6DC24791BD3000E3E53 /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 33C7D6C424791BD2000E3E53 /* airports.json */; };
 		33C7D6E724791D85000E3E53 /* CityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7D6E624791D85000E3E53 /* CityTableViewCell.m */; };
-		33CCAD612483972100E7C32F /* NewsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33CCAD602483972100E7C32F /* NewsStoryboard.storyboard */; };
 		33CCAD652483A13C00E7C32F /* NewsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCAD642483A13C00E7C32F /* NewsNavigationController.m */; };
 		33CCAD682483A6E300E7C32F /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCAD672483A6E300E7C32F /* NewsTableViewController.m */; };
 		33CCAD6C2483AA3C00E7C32F /* NewsDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCAD6B2483AA3C00E7C32F /* NewsDataManager.m */; };
 		33CCAD702483AA6E00E7C32F /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCAD6F2483AA6E00E7C32F /* News.m */; };
 		33CCAD742483C08800E7C32F /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCAD732483C08800E7C32F /* NewsTableViewCell.m */; };
 		33CCAD772483D97F00E7C32F /* NewsContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCAD762483D97F00E7C32F /* NewsContentViewController.m */; };
+		33D8DB8824B08584000135A6 /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D8DB8724B08584000135A6 /* NotificationsViewController.m */; };
 		33DA2ADC247112FC00CF4490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33DA2ADB247112FC00CF4490 /* Assets.xcassets */; };
 		33DA2ADF247112FC00CF4490 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33DA2ADD247112FC00CF4490 /* LaunchScreen.storyboard */; };
 		33E4A513248FFB8500433842 /* CityMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E4A512248FFB8500433842 /* CityMapViewController.m */; };
@@ -46,6 +49,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3301AF1824BAD41B0028C366 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		3301AF1C24BAD5360028C366 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3301AF1E24BAD5390028C366 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3301AF2024BADB140028C366 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NewsStoryboard.storyboard; sourceTree = "<group>"; };
+		3301AF2324BADB1E0028C366 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/NewsStoryboard.strings; sourceTree = "<group>"; };
+		3301AF2524BADB8A0028C366 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Notification.storyboard; sourceTree = "<group>"; };
+		3301AF2824BADB900028C366 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Notification.strings; sourceTree = "<group>"; };
 		332761AE2479053A00BDB8C4 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		332761AF2479053A00BDB8C4 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		332761B02479053A00BDB8C4 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
@@ -86,7 +96,6 @@
 		33C7D6C424791BD2000E3E53 /* airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = airports.json; sourceTree = "<group>"; };
 		33C7D6E524791D85000E3E53 /* CityTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CityTableViewCell.h; sourceTree = "<group>"; };
 		33C7D6E624791D85000E3E53 /* CityTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityTableViewCell.m; sourceTree = "<group>"; };
-		33CCAD602483972100E7C32F /* NewsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsStoryboard.storyboard; sourceTree = "<group>"; };
 		33CCAD632483A13C00E7C32F /* NewsNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsNavigationController.h; sourceTree = "<group>"; };
 		33CCAD642483A13C00E7C32F /* NewsNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsNavigationController.m; sourceTree = "<group>"; };
 		33CCAD662483A6E300E7C32F /* NewsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsTableViewController.h; sourceTree = "<group>"; };
@@ -99,6 +108,8 @@
 		33CCAD732483C08800E7C32F /* NewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
 		33CCAD752483D97F00E7C32F /* NewsContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsContentViewController.h; sourceTree = "<group>"; };
 		33CCAD762483D97F00E7C32F /* NewsContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsContentViewController.m; sourceTree = "<group>"; };
+		33D8DB8624B08584000135A6 /* NotificationsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationsViewController.h; sourceTree = "<group>"; };
+		33D8DB8724B08584000135A6 /* NotificationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationsViewController.m; sourceTree = "<group>"; };
 		33DA2ACC247112FA00CF4490 /* MyAvia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAvia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33DA2ACF247112FA00CF4490 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		33DA2AD0247112FA00CF4490 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -132,6 +143,7 @@
 				33DA2AD0247112FA00CF4490 /* AppDelegate.m */,
 				33DA2AD2247112FA00CF4490 /* SceneDelegate.h */,
 				33DA2AD3247112FA00CF4490 /* SceneDelegate.m */,
+				3301AF1D24BAD5360028C366 /* Localizable.strings */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -139,6 +151,7 @@
 		332761B2247906BC00BDB8C4 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				33D8DB8224B08300000135A6 /* Notifications */,
 				33346DE7249DC65F00A08AE6 /* Photo */,
 				33346DE3249C7EA500A08AE6 /* MainTabBar */,
 				33E4A50E248FFA2300433842 /* CityMap */,
@@ -323,7 +336,7 @@
 			children = (
 				33CCAD712483BDFA00E7C32F /* Views */,
 				33CCAD622483A0F600E7C32F /* Controllers */,
-				33CCAD602483972100E7C32F /* NewsStoryboard.storyboard */,
+				3301AF2124BADB140028C366 /* NewsStoryboard.storyboard */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -367,6 +380,24 @@
 				33CCAD732483C08800E7C32F /* NewsTableViewCell.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		33D8DB8224B08300000135A6 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				33D8DB8324B08318000135A6 /* Controllers */,
+				3301AF2624BADB8A0028C366 /* Notification.storyboard */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		33D8DB8324B08318000135A6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				33D8DB8624B08584000135A6 /* NotificationsViewController.h */,
+				33D8DB8724B08584000135A6 /* NotificationsViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		33DA2AC3247112FA00CF4490 = {
@@ -470,6 +501,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 33DA2AC3247112FA00CF4490;
 			productRefGroup = 33DA2ACD247112FA00CF4490 /* Products */;
@@ -486,11 +518,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33CCAD612483972100E7C32F /* NewsStoryboard.storyboard in Resources */,
+				3301AF1F24BADB140028C366 /* NewsStoryboard.storyboard in Resources */,
 				33346DEB249DC70800A08AE6 /* PhotoStoryboard.storyboard in Resources */,
 				33C7D6DB24791BD3000E3E53 /* cities.json in Resources */,
 				33DA2ADF247112FC00CF4490 /* LaunchScreen.storyboard in Resources */,
+				3301AF1B24BAD5360028C366 /* Localizable.strings in Resources */,
 				33C7D6D624791BD3000E3E53 /* countries.json in Resources */,
+				3301AF2424BADB8A0028C366 /* Notification.storyboard in Resources */,
 				33DA2ADC247112FC00CF4490 /* Assets.xcassets in Resources */,
 				33C7D6DC24791BD3000E3E53 /* airports.json in Resources */,
 			);
@@ -508,6 +542,7 @@
 				332761C924790F6D00BDB8C4 /* AirportsViewController.m in Sources */,
 				33E4A516248FFFDD00433842 /* CityMapView.m in Sources */,
 				33346DF1249DD2CB00A08AE6 /* PhotoNavigationController.m in Sources */,
+				33D8DB8824B08584000135A6 /* NotificationsViewController.m in Sources */,
 				33346E0824A8A91B00A08AE6 /* BDFavouriteAirport+CoreDataProperties.m in Sources */,
 				33CCAD702483AA6E00E7C32F /* News.m in Sources */,
 				332761BD24790CFE00BDB8C4 /* main.m in Sources */,
@@ -538,10 +573,38 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		3301AF1D24BAD5360028C366 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3301AF1C24BAD5360028C366 /* en */,
+				3301AF1E24BAD5390028C366 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		3301AF2124BADB140028C366 /* NewsStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3301AF2024BADB140028C366 /* Base */,
+				3301AF2324BADB1E0028C366 /* ru */,
+			);
+			name = NewsStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		3301AF2624BADB8A0028C366 /* Notification.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3301AF2524BADB8A0028C366 /* Base */,
+				3301AF2824BADB900028C366 /* ru */,
+			);
+			name = Notification.storyboard;
+			sourceTree = "<group>";
+		};
 		33DA2ADD247112FC00CF4490 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				33DA2ADE247112FC00CF4490 /* Base */,
+				3301AF1824BAD41B0028C366 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -553,6 +616,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -611,6 +675,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

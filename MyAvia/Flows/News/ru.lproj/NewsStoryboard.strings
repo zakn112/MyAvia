@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "title"; ObjectID = "JaV-jK-043"; */
+"JaV-jK-043.text" = "Тема";
+
+/* Class = "UILabel"; text = "Content"; ObjectID = "PCw-lP-2dV"; */
+"PCw-lP-2dV.text" = "Сооб";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "Qo0-gn-cev"; */
+"Qo0-gn-cev.text" = "Description";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "TFp-Vj-z70"; */
+"TFp-Vj-z70.text" = "Title";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "iQZ-bn-nhK"; */
+"iQZ-bn-nhK.text" = "Date";
+
+/* Class = "UINavigationItem"; title = "Root View Controller"; ObjectID = "q9k-24-iwW"; */
+"q9k-24-iwW.title" = "Root View Controller";

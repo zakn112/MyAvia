@@ -120,6 +120,7 @@
                     <navigationItem key="navigationItem" id="rNL-8i-3Yh"/>
                     <connections>
                         <outlet property="content" destination="PCw-lP-2dV" id="BhD-cg-RTf"/>
+                        <outlet property="contentTopConstr" destination="iud-ec-wtG" id="GFW-ol-Kuv"/>
                         <outlet property="newsTitle" destination="JaV-jK-043" id="odh-PX-neP"/>
                     </connections>
                 </viewController>

@@ -12,6 +12,8 @@
 #import "CitiesViewController.h"
 #import "MainTabBarController.h"
 #import "CoreDataHelper.h"
+#import <UserNotifications/UserNotifications.h>
+#import "NotificationsViewController.h"
 
 
 @interface FirstViewController ()
@@ -44,6 +46,19 @@
     [self addLable];
     [self addButtonNews];
     [self addButtonPhoto];
+    [self addButtonNotification];
+    
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    center.delegate = self;
+    [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert)
+                          completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        if (!error) {
+            NSLog(@"request authorization succeeded!");
+        }
+    }];
+
+    
+    
     
 }
 
@@ -55,7 +70,7 @@
 - (void) addButtonNextController{
     CGRect frame = CGRectMake(20, 100, self.view.bounds.size.width - 40, 30);
     UIButton *button = [UIButton buttonWithType: UIButtonTypeSystem];
-    [button setTitle:@"Следующей контроллер" forState:UIControlStateNormal];
+    [button setTitle:NSLocalizedString(@"nextController", @"") forState:UIControlStateNormal];
     button.backgroundColor = [UIColor blueColor];
     button.tintColor = [UIColor whiteColor];
     button.frame = frame;
@@ -66,7 +81,7 @@
 - (void) addButtonAirports{
     CGRect frame = CGRectMake(20, 150, self.view.bounds.size.width - 40, 30);
     UIButton *button = [UIButton buttonWithType: UIButtonTypeSystem];
-    [button setTitle:@"Аэропорты" forState:UIControlStateNormal];
+    [button setTitle:NSLocalizedString(@"airports", @"") forState:UIControlStateNormal];
     button.backgroundColor = [UIColor blueColor];
     button.tintColor = [UIColor whiteColor];
     button.frame = frame;
@@ -77,7 +92,7 @@
 - (void) addButtonTickets{
     CGRect frame = CGRectMake(20, 150, self.view.bounds.size.width - 40, 30);
     UIButton *button = [UIButton buttonWithType: UIButtonTypeSystem];
-    [button setTitle:@"Поиск билетов" forState:UIControlStateNormal];
+    [button setTitle:NSLocalizedString(@"searchTickets", @"") forState:UIControlStateNormal];
     button.backgroundColor = [UIColor blueColor];
     button.tintColor = [UIColor whiteColor];
     button.frame = frame;
@@ -124,14 +139,14 @@
     _label.font = [UIFont systemFontOfSize:12.0 weight:UIFontWeightBold];
     _label.textColor = [UIColor darkGrayColor];
     _label.textAlignment = NSTextAlignmentCenter;
-    _label.text = @"Список выбранных аэропортов";
+    _label.text = NSLocalizedString(@"list of selected airports", @"");
     [self.view addSubview: _label];
 }
 
 - (void) addButtonNews{
     CGRect frame = CGRectMake(20, 300, self.view.bounds.size.width - 40, 30);
     UIButton *button = [UIButton buttonWithType: UIButtonTypeSystem];
-    [button setTitle:@"Новости" forState:UIControlStateNormal];
+    [button setTitle:NSLocalizedString(@"news", @"") forState:UIControlStateNormal];
     button.backgroundColor = [UIColor blueColor];
     button.tintColor = [UIColor whiteColor];
     button.frame = frame;
@@ -148,7 +163,7 @@
 - (void) addButtonPhoto{
     CGRect frame = CGRectMake(20, 350, self.view.bounds.size.width - 40, 30);
     UIButton *button = [UIButton buttonWithType: UIButtonTypeSystem];
-    [button setTitle:@"Фотографии" forState:UIControlStateNormal];
+    [button setTitle:NSLocalizedString(@"photos", @"") forState:UIControlStateNormal];
     button.backgroundColor = [UIColor blueColor];
     button.tintColor = [UIColor whiteColor];
     button.frame = frame;
@@ -162,6 +177,21 @@
     
 }
 
+- (void) addButtonNotification{
+    CGRect frame = CGRectMake(20, 400, self.view.bounds.size.width - 40, 30);
+    UIButton *button = [UIButton buttonWithType: UIButtonTypeSystem];
+    [button setTitle:NSLocalizedString(@"addNotification", @"") forState:UIControlStateNormal];
+    button.backgroundColor = [UIColor blueColor];
+    button.tintColor = [UIColor whiteColor];
+    button.frame = frame;
+    [button addTarget:self action:@selector(notificationButtonDidTap:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+}
+
+- (void)notificationButtonDidTap:(UIButton *)sender{
+   NotificationsViewController *controller = [[UIStoryboard storyboardWithName:@"Notification" bundle:nil] instantiateViewControllerWithIdentifier:@"NotificationController"];
+   [UIApplication sharedApplication].keyWindow.rootViewController = controller;
+}
 
 - (void) addAirportInList: (Airport *)airport{
     [_airportsArray addObject:[NSString stringWithFormat: @"%@", airport.name]];
